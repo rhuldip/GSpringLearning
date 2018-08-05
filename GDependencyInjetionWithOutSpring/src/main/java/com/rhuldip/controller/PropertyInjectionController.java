@@ -1,12 +1,17 @@
 package com.rhuldip.controller;
 
-import com.rhuldip.service.ExampleServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+import com.rhuldip.service.ExampleService;
+
+@Controller
 public class PropertyInjectionController {
 
-	public ExampleServiceImpl exampleService;
+	@Autowired
+	public ExampleService exampleServiceImpl;
 	
 	public String callService() {
-		return this.exampleService.exampleMethod("PropertyInjection");
+		return this.exampleServiceImpl.exampleMethod("PropertyInjection");
 	}
 }

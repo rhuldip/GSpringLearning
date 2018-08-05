@@ -1,12 +1,17 @@
 package com.rhuldip.controller;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+
+import com.rhuldip.service.ExampleService;
 import com.rhuldip.service.ExampleServiceImpl;
 
+@Controller
 public class ConstructorInjectionController {
 	
-	ExampleServiceImpl exampleService;
+	ExampleService exampleService;
 	
-	public ConstructorInjectionController(ExampleServiceImpl exampleService){
+	public ConstructorInjectionController(@Qualifier("exampleServiceImpl2")ExampleService exampleService){
 		this.exampleService = exampleService;
 	}
 	

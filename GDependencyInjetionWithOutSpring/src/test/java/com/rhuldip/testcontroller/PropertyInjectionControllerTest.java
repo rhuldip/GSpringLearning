@@ -15,7 +15,7 @@ public class PropertyInjectionControllerTest {
 	@Before
 	public void setUp() {
 		this.pCtrl = new PropertyInjectionController();
-		this.pCtrl.exampleService = new ExampleServiceImpl();
+		this.pCtrl.exampleServiceImpl = new ExampleServiceImpl();
 	}
 	
 	@Test
