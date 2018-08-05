@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Primary
-@Profile("two")
+//@Primary
+@Profile({"two", "default"})
 public class ExampleServiceImpl2 implements ExampleService{
 
 	public String exampleMethod(String src) {
