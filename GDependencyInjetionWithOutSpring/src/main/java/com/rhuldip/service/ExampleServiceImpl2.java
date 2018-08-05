@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Primary
-@Profile("one")
-public class ExampleServiceImpl implements ExampleService {
+@Profile("two")
+public class ExampleServiceImpl2 implements ExampleService{
 
 	public String exampleMethod(String src) {
-		System.out.println("1: Service call Happening "+src);
-		return "1: "+ src;
+		System.out.println("2: Service call Happening "+src);
+		return "2: "+ src;
 	}
-
+	
 }

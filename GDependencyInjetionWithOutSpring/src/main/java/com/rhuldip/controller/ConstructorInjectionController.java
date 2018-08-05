@@ -1,12 +1,15 @@
 package com.rhuldip.controller;
 
-import com.rhuldip.service.ExampleServiceImpl;
+import org.springframework.stereotype.Controller;
 
+import com.rhuldip.service.ExampleService;
+
+@Controller
 public class ConstructorInjectionController {
 	
-	ExampleServiceImpl exampleService;
+	ExampleService exampleService;
 	
-	public ConstructorInjectionController(ExampleServiceImpl exampleService){
+	public ConstructorInjectionController(ExampleService exampleService){
 		this.exampleService = exampleService;
 	}
 	
